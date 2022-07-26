@@ -1,0 +1,11 @@
+{
+  "swaggerDefinition": {
+    "openapi": "3.0.3",
+    "info": {
+      "title": "NodeJS Prisma Example API",
+      "version": "0.0.0"
+    },
+    "servers": [{ "url": "/api" }]
+  },
+  "apis": ["./src/**/*route.ts"]
+}
