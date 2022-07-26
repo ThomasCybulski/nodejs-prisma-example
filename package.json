@@ -16,7 +16,7 @@
     "prisma:studio": "npx prisma studio"
   },
   "author": "Thomas Cybulski",
-  "license": "",
+  "license": "MIT",
   "engines": {
     "node": ">= 16.13.0"
   },
