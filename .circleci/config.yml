@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  nodejs:
+  nodejs-build:
     docker:
       - image: cimg/node:16.16.0
     steps:
@@ -13,4 +13,4 @@ jobs:
 workflows:
   nodejs-workflow:
     jobs:
-      - build
+      - nodejs-build
