@@ -2,11 +2,13 @@ version: 2.1
 
 jobs:
   build_and_test:
-    executor: node/default
+    docker:
+      - image: cimg/node:16.16.0
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - run:
+          command: npm ci
+          name: Install packages
       - run:
           command: npm run lint:check
           name: Run linter
