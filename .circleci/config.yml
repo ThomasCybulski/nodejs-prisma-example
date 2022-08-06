@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    docker:
+      - image: cimg/node:16.16.0
+    steps:
+      - checkout
+      - run:
+          command: npm ci
+          name: Install packages
+      - run:
+          command: npm run lint:check
+          name: Run linter
+      - run:
+          command: npm run build
+          name: Build app
+
+workflows:
+  nodejs-workflow:
+    jobs:
+      - build_and_test
