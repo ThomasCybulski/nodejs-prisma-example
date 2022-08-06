@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 Start postgres:
 
 ```sh
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker run --name nodejs-prisma-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
 
 ### Installation
@@ -46,9 +46,14 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Prepare PostgreSQL DB
+   ```sh
+   npm run prisma:update
+   ```
+2. Run NodeJS
+   ```sh
+   npm run serve
+   ```
 
 ### Test
 
