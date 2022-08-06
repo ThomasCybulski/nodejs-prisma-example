@@ -1,4 +1,3 @@
-import { User } from '@prisma/client';
 import { logger } from '@utils/logger';
 import prisma from '../prisma-client';
 import { DeleteUserDTO } from './dto/delete-user.dto';
@@ -11,7 +10,7 @@ class UserService {
   }
 
   async getUsers(): Promise<UserDTO[]> {
-    logger.debug(`[USER] Try to return all user entries`);
+    logger.debug('[USER] Try to return all user entries');
 
     const userEntity = await prisma.user.findMany();
     const dto: UserDTO[] = [];
